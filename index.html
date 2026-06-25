@@ -3,34 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vicase | Desarrollador de Apps</title>
+    <title>vcalvose | Developer</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; }
-        header { padding: 40px 0; }
-        h1 { color: #2c3e50; }
-        .container { background: #f9f9f9; padding: 30px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .btn { display: inline-block; padding: 12px 24px; margin: 10px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; transition: background 0.3s; }
-        .btn:hover { background: #0056b3; }
-        footer { margin-top: 40px; font-size: 0.9em; color: #777; }
+        :root {
+            --bg: #0d1117;
+            --code-bg: #161b22;
+            --text: #c9d1d9;
+            --keyword: #ff7b72;
+            --string: #a5d6ff;
+            --function: #d2a8ff;
+            --accent: #58a6ff;
+        }
+        body { 
+            background-color: var(--bg); 
+            color: var(--text); 
+            font-family: 'Courier New', Courier, monospace; 
+            margin: 0; 
+            padding: 20px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .terminal {
+            background-color: var(--code-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 600px;
+            width: 100%;
+        }
+        .blink { animation: blink 1s infinite; font-weight: bold; color: var(--accent); }
+        @keyframes blink { 50% { opacity: 0; } }
+        
+        .code-block { margin-top: 20px; }
+        .keyword { color: var(--keyword); }
+        .string { color: var(--string); }
+        .func { color: var(--function); }
+        
+        .btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 20px; 
+            background: var(--accent); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Vicase</h1>
-        <p>Desarrollador de aplicaciones móviles</p>
-    </header>
+    <div class="terminal">
+        <div><span class="keyword">const</span> <span class="func">developer</span> = {</div>
+        <div style="padding-left: 20px;">
+            name: <span class="string">"Vcalvose"</span>,<br>
+            role: <span class="string">"Mobile App Developer"</span>,<br>
+            status: <span class="string">"Android Developer"</span>
+        </div>
+        <div>};</div>
 
-    <div class="container">
-        <h2>Mis Aplicaciones</h2>
-        <p>Aquí encontrarás información sobre mis proyectos y aplicaciones.</p>
-        <a href="URL_DE_TU_APP_EN_LA_TIENDA" class="btn">Ver App en Google Play</a>
+        <div class="code-block">
+            <span class="keyword">function</span> <span class="func">showApps</span>() {<br>
+            &nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Echa un vistazo a mis proyectos"</span>;<br>
+            }
+        </div>
+
+        <a href="https://play.google.com/store/apps/developer?id=VICASE" class="btn">Ver App en Play Store</a>
+        <p style="margin-top:20px;">> <span class="blink">_</span></p>
     </div>
-
-    <footer>
-        <p><a href="mailto:tu-correo@ejemplo.com">Contacto de Soporte</a> | <a href="#">Política de Privacidad</a></p>
-        <p>&copy; 2026 Vicase</p>
-    </footer>
 
 </body>
 </html>
